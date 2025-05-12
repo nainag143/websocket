@@ -1,20 +1,13 @@
 Install these packages:
 
-bash
-Copy
-Edit
+ 
 pip install channels mysqlclient
+
 Make sure you also have libmysqlclient-dev installed on Ubuntu:
-
-bash
-Copy
-Edit
 sudo apt-get install libmysqlclient-dev
-Update settings.py:
 
-python
-Copy
-Edit
+
+Update settings.py:
 INSTALLED_APPS = [
     ...
     'channels',
