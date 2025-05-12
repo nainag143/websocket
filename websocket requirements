@@ -1,0 +1,34 @@
+Install these packages:
+
+bash
+Copy
+Edit
+pip install channels mysqlclient
+Make sure you also have libmysqlclient-dev installed on Ubuntu:
+
+bash
+Copy
+Edit
+sudo apt-get install libmysqlclient-dev
+Update settings.py:
+
+python
+Copy
+Edit
+INSTALLED_APPS = [
+    ...
+    'channels',
+]
+
+ASGI_APPLICATION = 'your_project.asgi.application'
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'your_db_name',
+        'USER': 'your_user',
+        'PASSWORD': 'your_password',
+        'HOST': 'localhost',
+        'PORT': '3306',
+    }
+}
